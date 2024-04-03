@@ -1,15 +1,11 @@
 """REST client handling, including NamelyStream base class."""
-
-import requests
 from pathlib import Path
 from typing import Any, Dict, Optional, Iterable
-
+import requests
 
 from singer_sdk.helpers.jsonpath import extract_jsonpath
-from singer_sdk.plugin_base import PluginBase as TapBaseClass
 from singer_sdk.streams import RESTStream
 from singer_sdk.authenticators import BearerTokenAuthenticator
-
 
 SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
 
